@@ -1,4 +1,6 @@
 kidink
 ======
 
-A content presentment framework of markdown text files.
+Client-side processing content presentment framework of markdown files.
+
+http://ink.kidwm.net/
