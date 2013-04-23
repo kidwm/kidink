@@ -41,6 +41,19 @@ define([
                         document.title = title + ' - ' + self.title;
                     else
                         document.title = self.title;
+                    var $sections = $('#content h2');
+                    if ($sections.length > 0 ) {
+                        var $list = $('<ul id="list">');
+                        $sections.each(function(index) {
+                            index++;
+                            $(this).attr('id', 'section_' + index);
+                            $('<li><a href="#section_' + index + '">' + $(this).text() + '</a></li>').appendTo($list);
+                        });
+                        $('#content h1').after($list);
+                        if (window.location.hash) {
+                            $(document.body).scrollTop($(window.location.hash).offset().top);
+                        }
+                    }
                 }
             })
             .fail(function() {
