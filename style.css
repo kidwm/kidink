@@ -77,11 +77,18 @@ body > nav ul li a {
 	color: #ccc;
 }
 
-#content h2:not(:first-child)::before {
+#content h2::before {
 	display: block;
 	text-align: center;
 	content: '\00a7';
 	color: #ccc;
+}
+
+#content h2::after {
+	content: '\2726';
+	margin: 0 .5em 0 -.5em;
+	color: #ccc;
+	float: left;
 }
 
 #content pre {
@@ -110,7 +117,7 @@ body > footer {
 body > footer p::before {
     display: block;
     content: '\2766';
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: .5em 0;
     font-style: normal;
 }
