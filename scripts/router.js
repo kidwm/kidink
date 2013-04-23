@@ -50,8 +50,11 @@ define([
                             $('<li><a href="#section_' + index + '">' + $(this).text() + '</a></li>').appendTo($list);
                         });
                         $('#content h1').after($list);
-                        if (window.location.hash) {
-                            $(document.body).scrollTop($(window.location.hash).offset().top);
+                        if (window.location.hash) { // retrigger the anchor
+                            var hash = window.location.hash;
+                            window.location.hash = '';
+                            window.location.hash = hash;
+                            //$(document.body).scrollTop($(window.location.hash).offset().top);
                         }
                     }
                 }
