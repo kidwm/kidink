@@ -36,11 +36,15 @@ define([
                     $('#content').show(); // show the not found message 
                 } else {
                     $('#content').html(Converter.render(data)).show();
-                    var title = $('#content h1').first().text();
-                    if (title)
-                        document.title = title + ' - ' + self.title;
-                    else
-                        document.title = self.title;
+					if ($('#content h1').length) {
+                    	var title = $('#content h1').first().text();
+                    	if (title)
+                        	document.title = title + ' - ' + self.title;
+                    	else
+                        	document.title = self.title;
+					} else {
+						$('<h1 class="absent">').prependTo('#content');
+					}
                     var $sections = $('#content h2');
                     if ($sections.length > 0 ) {
                         var $list = $('<ul id="list">');
@@ -51,10 +55,7 @@ define([
                         });
                         $('#content h1').after($list);
                         if (window.location.hash) { // retrigger the anchor
-                            var hash = window.location.hash;
-                            window.location.hash = '';
-                            window.location.hash = hash;
-                            //$(document.body).scrollTop($(window.location.hash).offset().top);
+                            $(document).scrollTop($(window.location.hash).offset().top);
                         }
                     }
                 }

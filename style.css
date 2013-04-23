@@ -72,6 +72,18 @@ body > nav ul li a {
     text-align: center;
 }
 
+#content h1.absent::after {
+	content: '\270D';
+	color: #ccc;
+}
+
+#content h2:not(:first-child)::before {
+	display: block;
+	text-align: center;
+	content: '\00a7';
+	color: #ccc;
+}
+
 #content pre {
     margin: 0 2em;
     padding: 1em 2em;
@@ -82,8 +94,9 @@ body > nav ul li a {
 }
 
 #list {
-    float: right;
-    margin-right: 2em;
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
 }
 
 #list li {
