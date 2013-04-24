@@ -1,19 +1,77 @@
 html {
-    background-color: rgb(221, 226, 252);
-    background-image: linear-gradient(to bottom, rgb(113, 134, 250), rgb(221, 226, 252));
-    background-repeat: no-repeat;
-    background-size: 100% 300px;
-    background-attachment: fixed;
+    font: normal 112.5%/1.65 serif;
 }
 
 body {
-    background-color: #fff;
-    max-width: 85%;
-    padding: 1em 0;
-    margin: 0 auto 2em;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 0 0 10px #999;
+    hyphens: auto;
+	word-wrap: break-word;
+	color: #444444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
+    color: #222222;
+}
+
+h1 {
+	font-size: 60px;
+	font-size: 3.33333rem;
+	margin-bottom: 0.495rem;
+}
+
+h2 {
+	font-size: 48px;
+	font-size: 2.66667rem;
+	margin-bottom: 0.61875rem;
+}
+
+h3 {
+	font-size: 36px;
+	font-size: 2rem;
+	margin-bottom: 0.825rem;
+}
+
+h4 {
+	font-size: 24px;
+	font-size: 1.33333rem;
+	margin-bottom: 1.2375rem;
+}
+
+h5 {
+	font-size: 21px;
+	font-size: 1.16667rem;
+	margin-bottom: 1.41429rem;
+}
+
+h6 {
+	font-size: 18px;
+	font-size: 1rem;
+	margin-bottom: 1.65rem;
+}
+
+code {
+    hyphens: none;
+}
+
+pre code {
+	word-wrap: normal;
+	white-space: pre-wrap;
+}
+
+pre {
+	white-space: pre;
+}
+
+code {
+	white-space: pre;
+	font-family: monospace;
 }
 
 @media screen and (max-width: 540px) {
@@ -25,9 +83,25 @@ body {
     }
 }
 
+html {
+    background-color: rgb(221, 226, 252);
+    background-image: linear-gradient(to bottom, rgb(113, 134, 250), rgb(221, 226, 252));
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: #fff;
+    max-width: 85%;
+    margin: 0 auto 2em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 0 10px #999;
+}
+
 body > header {
-    margin-top: -1em;
-    padding-left: 1em;
+    padding-top: 1em;
 }
 
 body > header h1 {
@@ -41,7 +115,7 @@ body > header p {
 
 body > nav ul {
     list-style-type: none;
-    margin: 0 1em;
+    margin: 0 1em 1em;
     padding: 0 15px;
     border-radius: .5em;
     background-color: #0f25a7;
@@ -68,6 +142,10 @@ body > nav ul li a {
     margin: 0 2em 1em;
 }
 
+#content p {
+    text-indent: 2em;
+}
+
 #content h1 {
     text-align: center;
 }
@@ -86,7 +164,6 @@ body > nav ul li a {
 
 #content h2::after {
 	content: '\00a7';
-	margin: 0 .5em 0 -.5em;
 	color: #ccc;
 	float: left;
 }
@@ -112,6 +189,7 @@ body > nav ul li a {
 
 body > footer {
     width: 100%;
+    padding-bottom: 1em;
 }
 
 body > footer p::before {
