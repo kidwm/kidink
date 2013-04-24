@@ -67,6 +67,7 @@ pre code {
 
 pre {
 	white-space: pre;
+    overflow: scroll;
 }
 
 code {
@@ -92,9 +93,10 @@ html {
 }
 
 body {
+    font-family: 'Rosario', 'Hiragino Mincho Pro' serif;
     background-color: #fff;
-    max-width: 85%;
-    margin: 0 auto 2em;
+    max-width: 90%;
+    margin: 0 auto 1.5em;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 0 0 10px #999;
@@ -115,7 +117,7 @@ body > header p {
 
 body > nav ul {
     list-style-type: none;
-    margin: 0 1em 1em;
+    margin: .5em 1.5em 1em;
     padding: 0 15px;
     border-radius: .5em;
     background-color: #0f25a7;
@@ -139,11 +141,12 @@ body > nav ul li a {
 }
 
 #content {
-    margin: 0 2em 1em;
+    margin: 0 3em 1em;
 }
 
 #content p {
     text-indent: 2em;
+    margin: 1.5em 0;
 }
 
 #content h1 {
@@ -160,12 +163,16 @@ body > nav ul li a {
 	text-align: center;
 	content: '\2766';
 	color: #ccc;
+    margin-bottom: .5em;
 }
 
 #content h2::after {
 	content: '\00a7';
 	color: #ccc;
 	float: left;
+    position: relative;
+    top: -0.125em;
+    margin-right: .25em;
 }
 
 #content pre {
@@ -195,7 +202,7 @@ body > footer {
 body > footer p::before {
     display: block;
     content: '\2618';
-    font-size: 1.8em;
+    font-size: 3.6rem;
     margin: .5em 0;
     font-style: normal;
 }
