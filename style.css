@@ -80,12 +80,12 @@ body > nav ul li a {
 #content h2::before {
 	display: block;
 	text-align: center;
-	content: '\00a7';
+	content: '\2766';
 	color: #ccc;
 }
 
 #content h2::after {
-	content: '\2726';
+	content: '\00a7';
 	margin: 0 .5em 0 -.5em;
 	color: #ccc;
 	float: left;
@@ -116,7 +116,7 @@ body > footer {
 
 body > footer p::before {
     display: block;
-    content: '\2766';
+    content: '\2618';
     font-size: 1.8em;
     margin: .5em 0;
     font-style: normal;
