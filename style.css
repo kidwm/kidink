@@ -182,11 +182,12 @@ body > nav ul li a {
 }
 
 #content pre {
-    padding: 1.5em;
+    padding: 1.5em 3rem;
     color: #fff;
     background-color: #06134a;
     box-shadow: inset 0 0 20px #b6c0e8;
-    position: relative;
+    margin-left: -3rem;
+    margin-right: -3rem;
 }
 
 #list {
